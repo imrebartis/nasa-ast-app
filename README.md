@@ -30,7 +30,7 @@ chops, or other aspects that you feel are important in front-end development
 
 ## Screenshots
 
-![alt text](assets/app_screen.png)
+![Nasa Asteroids App](src/assets/app_screen.png)
 
 ## Libraries / Tools Used
 
