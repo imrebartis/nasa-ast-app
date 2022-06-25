@@ -1,0 +1,39 @@
+/*
+  Overrides for the initial styling provided by
+  pikaday/css/pikaday.css
+*/
+
+.pika-single {
+  border: 1px solid #bdbdbd;
+  border-bottom-color: #bdbdbd;
+}
+
+.pika-table th {
+  color: #616161;
+}
+
+.pika-button {
+  color: #616161;
+  background: #F5F5F5;
+}
+
+.pika-week {
+  color: #616161;
+}
+
+.is-today .pika-button {
+  color: #000000;
+}
+
+.is-selected .pika-button {
+  color: #FFFFFF;
+  background: #000000;
+}
+
+.is-outside-current-month .pika-button {
+  color: #616161;
+}
+
+.pika-button:hover {
+  background: #E205B4;
+}
