@@ -26,7 +26,6 @@ const DatePicker = ({
     const element = elementRef.current;
     const picker = new Pikaday({
       field: element,
-      // bound: false,
       format: 'DD.MM.YYYY',
       showWeekNumber: true,
       firstDay: 1,

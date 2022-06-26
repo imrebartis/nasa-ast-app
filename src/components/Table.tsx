@@ -96,15 +96,6 @@ export default function AsteroidsTables({ loading, error, asteroids }: Component
                   <StyledTableCell>
                     <Loader />
                   </StyledTableCell>
-                  <StyledTableCell>
-                    <Loader />
-                  </StyledTableCell>
-                  <StyledTableCell>
-                    <Loader />
-                  </StyledTableCell>
-                  <StyledTableCell>
-                    <Loader />
-                  </StyledTableCell>
                 </StyledTableRow>
               )}
             </TableBody>
