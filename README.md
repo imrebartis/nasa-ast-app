@@ -39,6 +39,7 @@ chops, or other aspects that you feel are important in front-end development
 - Pikaday
 - Moment
 - Cypress
+- MUI
 
 ## Setup
 
