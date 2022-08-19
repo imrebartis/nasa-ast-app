@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -66,6 +66,10 @@ export default function AsteroidsTables({ loading, error, asteroids }: Component
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
+  useEffect(() => {
+    setPage(0);
+  }, [loading]);
 
   return (
     <Paper sx={{ marginBottom: 8 }}>

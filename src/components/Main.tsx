@@ -62,7 +62,7 @@ const useStyles = makeStyles({
     overflow: 'hidden',
     position: 'absolute',
     whiteSpace: 'nowrap',
-    width: ' 1px'
+    width: '1px',
   }
 });
 
@@ -106,6 +106,7 @@ export default function Main() {
   };
 
   useEffect(() => {
+    setLoading(true);
     fetchAsteroids();
   }, [to, from]);
 
