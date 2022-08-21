@@ -67,6 +67,14 @@ export default function AsteroidsTables({ loading, error, asteroids }: Component
     setPage(0);
   };
 
+  const roundDownAstKmsToInt = (a: Asteroid) => {
+    return Math.floor(parseInt(a.close_approach_data[0].miss_distance.kilometers, 10));
+  };
+
+  const compareAsteroids = (a: Asteroid, b: Asteroid) => {
+    return roundDownAstKmsToInt(a) - roundDownAstKmsToInt(b);
+  };
+
   useEffect(() => {
     setPage(0);
   }, [loading]);
@@ -86,13 +94,13 @@ export default function AsteroidsTables({ loading, error, asteroids }: Component
               </TableRow>
             </TableHead>
             <TableBody>
-              {!loading && asteroids.length > 0 ? (asteroids.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
+              {!loading && asteroids.length > 0 ? (asteroids.sort(compareAsteroids).slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
                 <StyledTableRow key={row.id}>
                   <StyledTableCell component="th" scope="row" data-cy={`cell-id-${row.id}`}>
                     {row.id}
                   </StyledTableCell>
                   <StyledTableCell align="right">{row.name}</StyledTableCell>
-                  <StyledTableCell align="right">{row.close_approach_data[0].miss_distance.kilometers}</StyledTableCell>
+                  <StyledTableCell align="right">{roundDownAstKmsToInt(row)}</StyledTableCell>
                   <StyledTableCell align="right">{row.absolute_magnitude_h}</StyledTableCell>
                 </StyledTableRow>
               ))) : (
